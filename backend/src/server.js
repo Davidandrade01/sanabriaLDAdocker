@@ -28,5 +28,5 @@ app.post("/api/users", (req, res) => {
 });
 
 app.listen(4000, () => {
-  console.log("✅ Servidor backend a correr em http://localhost:4000");
+  console.log("✅ Servidor backend a correr na porta 4000");
 });

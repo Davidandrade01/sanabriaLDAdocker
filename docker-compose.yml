@@ -39,8 +39,7 @@ services:
       - "3000:3000"
     depends_on:
       - backend
-    volumes:
-      - ./frontend:/app
+    # Remove bind mount em produção
 
   nginx:
     build:
@@ -49,7 +48,7 @@ services:
     container_name: nginx_container
     restart: always
     ports:
-      - "8080:80"
+      - "80:80"
     depends_on:
       - frontend
       - backend
